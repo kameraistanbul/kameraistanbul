@@ -9,13 +9,19 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
-            color: white;
-            text-align: center;
+            background: #f4f4f4;
+            color: #333;
         }
         header {
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.5);
+            background: #0f2027;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header img {
+            width: 100px;
+            margin-bottom: 10px;
         }
         header h1 {
             margin: 0;
@@ -23,10 +29,15 @@
         }
         header p {
             font-size: 1.2em;
-            color: #ccc;
+            color: #ddd;
         }
         main {
             padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        section {
+            margin-bottom: 50px;
         }
         .btn {
             display: inline-block;
@@ -41,29 +52,76 @@
         .btn:hover {
             background: #e68900;
         }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+        }
+        iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+            border-radius: 8px;
+            box-shadow: 0px 3px 6px rgba(0,0,0,0.2);
+        }
         footer {
+            background: #203a43;
+            color: white;
+            text-align: center;
             padding: 15px;
-            background: rgba(0, 0, 0, 0.4);
             font-size: 0.9em;
-            margin-top: 40px;
         }
     </style>
 </head>
 <body>
+
     <header>
+        <!-- LOGO -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Security_camera_icon.svg/1024px-Security_camera_icon.svg.png" alt="Kamera İstanbul Logo">
         <h1>Kamera İstanbul</h1>
         <p>Güvenlik Kamera Sistemleri ve Teknoloji Çözümleri</p>
     </header>
 
     <main>
-        <h2>Hoş Geldiniz</h2>
-        <p>Profesyonel güvenlik kamera kurulumu, bakım ve teknoloji çözümleri sunuyoruz. 
-           İhtiyaçlarınıza özel sistem tasarımı ile en iyi güvenliği sağlıyoruz.</p>
-        <a href="mailto:info@kameraistanbul.com.tr" class="btn">Bize Ulaşın</a>
+        <!-- Hoşgeldiniz -->
+        <section>
+            <h2>Hoş Geldiniz</h2>
+            <p>Profesyonel güvenlik kamera kurulumu, bakım ve teknoloji çözümleri sunuyoruz. 
+               İhtiyacınıza özel sistem tasarımı ile en iyi güvenliği sağlıyoruz.</p>
+            <a href="mailto:info@kameraistanbul.com.tr" class="btn">Bize Ulaşın</a>
+        </section>
+
+        <!-- Fotoğraf Galerisi -->
+        <section>
+            <h2>Projelerimizden Örnekler</h2>
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1585753039654-2f7a2a829e4e" alt="Kamera 1">
+                <img src="https://images.unsplash.com/photo-1551033541-2075d8363c64" alt="Kamera 2">
+                <img src="https://images.unsplash.com/photo-1614064646464-2c80db5d2e1c" alt="Kamera 3">
+            </div>
+        </section>
+
+        <!-- Harita -->
+        <section>
+            <h2>Ofisimiz</h2>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12038.84810298859!2d28.9783581!3d41.0082376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9b7a3f3c7f7%3A0x93b1e2b1fbcf5ef8!2sİstanbul!5e0!3m2!1str!2str!4v1694692685861" 
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+        </section>
     </main>
 
     <footer>
         © 2025 Kamera İstanbul - Tüm Hakları Saklıdır
     </footer>
+
 </body>
 </html>
